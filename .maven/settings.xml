@@ -5,5 +5,10 @@
             <username>~~~Client~~~</username>
             <password>${CA_CLIENT_ID}~?~${CA_CLIENT_SECRET}</password>
         </server>
+		<server>
+            <id>anypoint-exchange-v3</id>
+            <username>~~~Client~~~</username>
+            <password>${CA_CLIENT_ID}~?~${CA_CLIENT_SECRET}</password>
+        </server>
     </servers>
 </settings>
