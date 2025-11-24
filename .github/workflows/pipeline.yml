@@ -13,6 +13,7 @@ jobs:
     env:
       CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
       CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
+      ENVIROMENT: ${{ secrets.ENVIROMENT }}
     
     steps:
     
@@ -58,6 +59,7 @@ jobs:
     env:
       CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
       CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
+      ENVIROMENT: ${{ secrets.ENVIROMENT }}
 
     steps:    
     
@@ -80,6 +82,7 @@ jobs:
         mvn deploy \
          -s .maven/settings.xml \
          -Dmule.artifact=$artifactName \
+         -Dmule.env= "$ENVIROMENT"
        
     
  
@@ -90,7 +93,7 @@ jobs:
     env:
       CA_CLIENT_ID: ${{ secrets.CA_CLIENT_ID }}
       CA_CLIENT_SECRET: ${{ secrets.CA_CLIENT_SECRET }}
-
+      ENVIROMENT: ${{ secrets.ENVIROMENT }}
     steps:    
     
     - uses: actions/checkout@v3
@@ -112,4 +115,5 @@ jobs:
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
          -s .maven/settings.xml \
-         -DskipTests
+         -DskipTests \
+         -Dmule.env= "$ENVIROMENT"
