@@ -6,7 +6,7 @@
 
 	<groupId>efdf2a93-4be6-477c-b435-7956514f8e36</groupId>
 	<artifactId>review-continious</artifactId>
-	<version>1.0.10</version>
+	<version>1.0.11</version>
 	<packaging>mule-application</packaging>
 
 	<name>review-continious</name>
@@ -51,7 +51,7 @@
 							</services>
 						</integrations>
 						<properties>
-							<env>${env}</env>
+							<env>${mule.env}</env>
 						</properties>
 					</cloudhub2Deployment>
 				</configuration>
