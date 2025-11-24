@@ -82,7 +82,7 @@ jobs:
         mvn deploy \
          -s .maven/settings.xml \
          -Dmule.artifact=$artifactName \
-         -Dmule.env= "$ENVIROMENT"
+         -Dmule.env="$ENVIROMENT"
        
     
  
@@ -116,4 +116,4 @@ jobs:
          -Dmule.artifact=$artifactName \
          -s .maven/settings.xml \
          -DskipTests \
-         -Dmule.env= "$ENVIROMENT"
+         -Dmule.env="$ENVIROMENT"
