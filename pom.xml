@@ -6,7 +6,7 @@
 
 	<groupId>efdf2a93-4be6-477c-b435-7956514f8e36</groupId>
 	<artifactId>review-continious</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
 	<packaging>mule-application</packaging>
 
 	<name>review-continious</name>
@@ -40,7 +40,7 @@
 						<target>Cloudhub-US-East-2</target>
 						<muleVersion>${app.runtime}</muleVersion>
 						<server>ca.anypoint.credentials</server>
-						<applicationName>ashish-demo-project-v1</applicationName>
+						<applicationName>ashish-demo-project-v2</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 						<integrations>
