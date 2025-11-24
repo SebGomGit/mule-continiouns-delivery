@@ -130,8 +130,9 @@ output application/json
 output application/json
 ---
 {
-  Result: "Ok"
-} as Object {encoding: "UTF-8", mediaType: "application/json"}]]></ee:set-payload>
+  result: "Ok",
+  enviroment: p('start.env')
+}]]></ee:set-payload>
             </ee:message>
         </ee:transform>
     </flow>
