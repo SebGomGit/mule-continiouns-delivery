@@ -6,7 +6,7 @@
 
 	<groupId>efdf2a93-4be6-477c-b435-7956514f8e36</groupId>
 	<artifactId>review-continious</artifactId>
-	<version>1.0.14</version>
+	<version>1.0.15</version>
 	<packaging>mule-application</packaging>
 
 	<name>review-continious</name>
@@ -73,7 +73,7 @@
 				</executions>
 				<configuration>
 					<runtimeProduct>MULE</runtimeProduct>
-					<runtimeVersion>4.4.0</runtimeVersion>
+					<runtimeVersion>${app.runtime}</runtimeVersion>
 					<coverage>
 						<runCoverage>true</runCoverage>
 						<formats>
