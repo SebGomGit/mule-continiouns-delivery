@@ -6,7 +6,7 @@
 
 	<groupId>efdf2a93-4be6-477c-b435-7956514f8e36</groupId>
 	<artifactId>review-continious</artifactId>
-	<version>1.0.13</version>
+	<version>1.0.14</version>
 	<packaging>mule-application</packaging>
 
 	<name>review-continious</name>
@@ -17,7 +17,7 @@
 
 		<app.runtime>4.6.0</app.runtime>
 		<mule.maven.plugin.version>4.5.3</mule.maven.plugin.version>
-		<munit.version>3.6.1</munit.version>
+		<munit.version>3.3.0</munit.version>
 	</properties>
 
 	<build>
@@ -72,6 +72,8 @@
 					</execution>
 				</executions>
 				<configuration>
+					<runtimeProduct>MULE</runtimeProduct>
+					<runtimeVersion>4.4.0</runtimeVersion>
 					<coverage>
 						<runCoverage>true</runCoverage>
 						<formats>
@@ -112,14 +114,14 @@
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
-			<version>3.6.1</version>
+			<version>${munit.version}</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
-			<version>3.6.1</version>
+			<version>${munit.version}</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
@@ -142,12 +144,6 @@
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
 			<url>https://repository.mulesoft.org/releases/</url>
-			<layout>default</layout>
-		</repository>
-		<repository>
-			<id>releases-ee</id>
-			<name>MuleSoft Releases EE Repository</name>
-			<url>https://repository.mulesoft.org/nexus/content/repositories/releases-ee/</url>
 			<layout>default</layout>
 		</repository>
 	</repositories>
