@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="reviewcicd-suite.xml" />
+	<munit:test name="get:\review:reviewcicd-config-test" doc:id="8c954edb-17fb-40f1-93fd-4e8ca40812c5" >
+		<munit:behavior >
+			<munit:set-event doc:name="Set Input" doc:id="3384342f-36f8-42c7-918e-0cd44f5c3102" >
+				<munit:payload value="#[readUrl('classpath://getreviewreviewcicdconfigtest\set-event_payload.dwl')]" encoding="UTF-8" />
+				<munit:attributes value="#[readUrl('classpath://getreviewreviewcicdconfigtest\set-event_attributes.dwl')]" />
+				<munit:variables >
+					<munit:variable key="outboundHeaders" value="#[readUrl('classpath://getreviewreviewcicdconfigtest\set-event_variable_.dwl')]" />
+				</munit:variables>
+			</munit:set-event>
+		</munit:behavior>
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\review:reviewcicd-config" doc:id="ba583694-9995-4e51-ba34-c333811eb4e8" name="get:\review:reviewcicd-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert expression" doc:id="9f3a771b-e379-4bc3-a3fa-bf77200d1f9a" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
